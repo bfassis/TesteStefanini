@@ -34,7 +34,7 @@ namespace TesteStefaniniWindows
                 {
                     arquivo = openFileDialog.FileName;
 
-                    var ret = bi.CarregarArquivoProduto(arquivo);
+                    var ret = bi.CarregarArquivoCliente(arquivo);
 
                     if (ret)
                         MessageBox.Show("Arquivo importado com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
