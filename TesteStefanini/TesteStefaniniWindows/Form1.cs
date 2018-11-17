@@ -33,10 +33,11 @@ namespace TesteStefaniniWindows
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     arquivo = openFileDialog.FileName;
-                    var ret = bi.CarregarArquivoCliente(arquivo);
+
+                    var ret = bi.CarregarArquivoProduto(arquivo);
 
                     if (ret)
-                        MessageBox.Show("Arquivo importado com sucesso","Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Arquivo importado com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show("Ocorreu um Erro ao importar o arquivo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

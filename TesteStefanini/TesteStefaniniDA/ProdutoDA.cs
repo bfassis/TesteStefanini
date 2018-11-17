@@ -16,9 +16,30 @@ namespace TesteStefaniniDA
                 using (var context = new TesteStefaniniEntities1())
                 {
                     var produto = context.Produto
-                        .Where(x => x.Codigo == codigo).FirstOrDefault();
+                        .Where(x => x.Codigo == codigo).Include(x => x.VinculoClienteProduto).FirstOrDefault();
 
                     return produto;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        public VinculoClienteProduto SelecionarVinculo(int codigo, int cliente)
+        {
+            try
+            {
+                using (var context = new TesteStefaniniEntities1())
+                {
+                    var vinculo = context.VinculoClienteProduto
+                        .Where(x => x.CodigoProduto == codigo && x.CodigoCliente == cliente).FirstOrDefault();
+
+                    return vinculo;
                 }
 
             }
@@ -67,6 +88,50 @@ namespace TesteStefaniniDA
                     context.VinculoClienteProduto.Add(vinculo);
 
                     context.SaveChanges();
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        public void InserirProduto(Produto produto)
+        {
+            try
+            {
+                var retProduto = Selecionar(produto.Codigo);
+                var vinculo = produto.VinculoClienteProduto;
+
+                if (retProduto == null)
+                {
+                    produto.VinculoClienteProduto = null;
+                    Inserir(produto);
+                }
+
+                InserirVinculoProduto(vinculo.FirstOrDefault());
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        public void InserirVinculoProduto(VinculoClienteProduto vinculo)
+        {
+            try
+            {
+                var retVinculo = SelecionarVinculo(vinculo.CodigoProduto, vinculo.CodigoCliente);
+
+                if (retVinculo == null)
+                {
+                    InserirVinculo(vinculo);
                 }
 
             }
