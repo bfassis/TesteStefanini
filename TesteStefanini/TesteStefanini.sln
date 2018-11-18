@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteStefaniniDA", "TesteSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteStefaniniWeb", "TesteStefaniniWeb\TesteStefaniniWeb.csproj", "{96BB4DF8-8B16-4000-9E95-071EE207931F}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TesteStefaniniDB", "TesteStefaniniDB\TesteStefaniniDB.sqlproj", "{1AF7A323-6F0F-4E47-AC0A-019B35AD69FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,12 @@ Global
 		{96BB4DF8-8B16-4000-9E95-071EE207931F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96BB4DF8-8B16-4000-9E95-071EE207931F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96BB4DF8-8B16-4000-9E95-071EE207931F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF7A323-6F0F-4E47-AC0A-019B35AD69FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF7A323-6F0F-4E47-AC0A-019B35AD69FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF7A323-6F0F-4E47-AC0A-019B35AD69FB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1AF7A323-6F0F-4E47-AC0A-019B35AD69FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF7A323-6F0F-4E47-AC0A-019B35AD69FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF7A323-6F0F-4E47-AC0A-019B35AD69FB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
