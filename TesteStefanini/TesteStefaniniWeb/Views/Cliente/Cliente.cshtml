@@ -1,0 +1,39 @@
+﻿@model TesteStefaniniWeb.Models.ClienteModel
+
+@{
+    ViewBag.Title = "Cliente";
+}
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <table style="width:800px">
+        <tr>
+
+            <td style="font-style:oblique">Codigo:</td>
+            <td style="font-style:oblique">Nome:</td>
+            <td style="font-style:oblique">Sobrenome:</td>
+            <td style="font-style:oblique">DataNascimento:</td>
+            <td style="font-style:oblique">Sexo:</td>
+            <td style="font-style:oblique">Email:</td>
+            <td style="font-style:oblique">Ativo:</td>
+        </tr>
+        @foreach (var item in Model.clienteModels)
+        {
+        <tr>
+            <td style="font-style:oblique">@item.Codigo</td>
+            <td style="font-style:oblique">@item.Nome</td>
+            <td style="font-style:oblique">@item.Sobrenome</td>
+            <td style="font-style:oblique">@item.DataNascimento.ToString("dd/MM/yyyy")</td>
+            <td style="font-style:oblique">@item.Sexo</td>
+            <td style="font-style:oblique">@item.Email</td>
+            <td style="font-style:oblique">@item.Ativo</td>
+        </tr>
+
+        }
+
+    </table>
+
+    <dl class="dl-horizontal"></dl>
+</div>
+

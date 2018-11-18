@@ -1,0 +1,29 @@
+﻿@model TesteStefaniniWeb.Models.ProdutoModel
+
+@{
+    ViewBag.Title = "Produto";
+}
+
+
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <table style="width:800px">
+        <tr>
+            
+            <td style="font-style:oblique">Codigo:</td>
+            <td style="font-style:oblique">Nome do Produto:</td>
+
+            @foreach (var item in Model.produtoModels)
+            {
+            <tr>
+                <td style="font-style:oblique">@item.Codigo</td>
+                <td style="font-style:oblique">@item.NomeProduto</td>
+            </tr>
+
+        }
+
+        </table>
+
+        <dl class="dl-horizontal"></dl>
+    </div>

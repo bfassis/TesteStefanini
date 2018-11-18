@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteStefaniniWindows", "Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteStefaniniDA", "TesteStefaniniDA\TesteStefaniniDA.csproj", "{2CCA84A2-839C-42CE-A1DF-195DF787C500}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteStefaniniWeb", "TesteStefaniniWeb\TesteStefaniniWeb.csproj", "{96BB4DF8-8B16-4000-9E95-071EE207931F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2CCA84A2-839C-42CE-A1DF-195DF787C500}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CCA84A2-839C-42CE-A1DF-195DF787C500}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CCA84A2-839C-42CE-A1DF-195DF787C500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BB4DF8-8B16-4000-9E95-071EE207931F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BB4DF8-8B16-4000-9E95-071EE207931F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BB4DF8-8B16-4000-9E95-071EE207931F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BB4DF8-8B16-4000-9E95-071EE207931F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
