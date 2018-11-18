@@ -197,9 +197,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Cliente\Cliente.cshtml" />
     <Content Include="Views\Produto\Produto.cshtml" />
+    <Content Include="Views\Cliente\UploadCliente.cshtml" />
+    <Content Include="Views\Produto\UploadProduto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="arquivos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

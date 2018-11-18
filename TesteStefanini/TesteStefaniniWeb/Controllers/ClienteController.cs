@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -31,6 +32,28 @@ namespace TesteStefaniniWeb.Controllers
             }
 
             return View(clienteModels);
+        }
+
+        public ActionResult UploadCliente()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Upload(HttpPostedFileBase file)
+        {
+            TesteStefaniniBI.PrepararArquivoTxt prepararArquivoTxt = new TesteStefaniniBI.PrepararArquivoTxt();
+
+            if (file != null && file.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var path = Path.Combine(Server.MapPath("~/arquivos/"), fileName);
+                file.SaveAs(path);
+
+                prepararArquivoTxt.CarregarArquivoCliente(path);
+            }
+
+            return RedirectToAction("Cliente");
         }
     }
 }
