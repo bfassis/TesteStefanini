@@ -28,5 +28,26 @@ namespace TesteStefaniniWindows
             form1.MdiParent = this;
             form1.Show();
         }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.MdiParent = this;
+            form3.Show();
+        }
+
+        private void clienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.MdiParent = this;
+            form4.Show();
+        }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.MdiParent = this;
+            form5.Show();
+        }
     }
 }

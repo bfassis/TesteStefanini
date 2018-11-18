@@ -15,7 +15,7 @@ namespace TesteStefaniniBI
         {
             string text = string.Empty;
             string mensagem = string.Empty;
-            ClienteDA clienteDA = new ClienteDA();
+            ClienteBI clienteBI = new ClienteBI();
             try
             {
                 if (!string.IsNullOrEmpty(arquivo))
@@ -40,7 +40,7 @@ namespace TesteStefaniniBI
                             cliente.Email = campos[5];
                             cliente.Ativo = Convert.ToBoolean(campos[6]);
 
-                            clienteDA.InserirCliente(cliente);
+                            clienteBI.InserirCliente(cliente);
                         }
                     }
 
@@ -59,11 +59,11 @@ namespace TesteStefaniniBI
 
         }
 
-        public void CarregarArquivoProduto(string arquivo)
+        public Boolean CarregarArquivoProduto(string arquivo)
         {
             string text = string.Empty;
             string mensagem = string.Empty;
-            ProdutoDA produtoDA = new ProdutoDA();
+            ProdutoBI produtoBI = new ProdutoBI();
             try
             {
                 if (!string.IsNullOrEmpty(arquivo))
@@ -88,21 +88,21 @@ namespace TesteStefaniniBI
                                 CodigoProduto = Convert.ToInt32(campos[0])
                             });
 
-                            produtoDA.InserirProduto(produto);
+                            produtoBI.InserirProduto(produto);
                         }
-
-                        //return true;
-                    }
-                    else
-                    {
-                        // return false;
                     }
 
+                    return true;
                 }
+                else
+                {
+                    return false;
+                }
+
             }
             catch (Exception ex)
             {
-                // return false;
+                return false;
             }
 
 

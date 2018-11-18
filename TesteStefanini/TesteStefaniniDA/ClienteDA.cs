@@ -16,7 +16,7 @@ namespace TesteStefaniniDA
                 using (var context = new TesteStefaniniEntities1())
                 {
                     var cliente = context.Cliente
-                        .Where(x => x.Codigo == codigo).FirstOrDefault();
+                        .Where(x => x.Codigo == codigo).Include(x=> x.VinculoClienteProduto).FirstOrDefault();
 
                     return cliente;
                 }
@@ -30,8 +30,27 @@ namespace TesteStefaniniDA
 
         }
 
+        public List<Cliente> SelecionarTodos()
+        {
+            try
+            {
+                using (var context = new TesteStefaniniEntities1())
+                {
+                    var cliente = context.Cliente.Include(x => x.VinculoClienteProduto).ToList();
 
-        private void Inserir(Cliente cliente)
+                    return cliente;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        public void Inserir(Cliente cliente)
         {
             try
             {
@@ -54,25 +73,6 @@ namespace TesteStefaniniDA
 
         }
 
-        public void InserirCliente(Cliente cliente)
-        {
-            try
-            {
-                var retCliente = Selecionar(cliente.Codigo);
-
-                if (retCliente == null)
-                {
-                    Inserir(cliente);
-                }
-
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-
-        }
-
+       
     }
 }

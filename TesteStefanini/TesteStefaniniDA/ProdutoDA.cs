@@ -30,6 +30,26 @@ namespace TesteStefaniniDA
 
         }
 
+        public List<Produto> SelecionarTodos()
+        {
+            try
+            {
+                using (var context = new TesteStefaniniEntities1())
+                {
+                    var produto = context.Produto.Include(x => x.VinculoClienteProduto).ToList();
+
+                    return produto;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
         public VinculoClienteProduto SelecionarVinculo(int codigo, int cliente)
         {
             try
